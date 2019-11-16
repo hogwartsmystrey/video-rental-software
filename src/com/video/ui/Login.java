@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import java.awt.Color;
+import java.awt.Font;
 
 public class Login {
 
@@ -47,11 +49,15 @@ public class Login {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.RED);
+		frame.getContentPane().setForeground(Color.YELLOW);
 		frame.setBounds(200, 100, 500, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
 		JLabel lblUsername = new JLabel("username");
+		lblUsername.setForeground(new Color(0, 0, 0));
+		lblUsername.setFont(new Font("Times New Roman", Font.BOLD, 13));
 		lblUsername.setBounds(103, 88, 69, 37);
 		frame.getContentPane().add(lblUsername);
 
@@ -60,6 +66,7 @@ public class Login {
 		frame.getContentPane().add(lblPassword);
 
 		username = new JTextField();
+		username.setForeground(Color.YELLOW);
 		username.setBounds(235, 96, 169, 20);
 		frame.getContentPane().add(username);
 		username.setColumns(10);
